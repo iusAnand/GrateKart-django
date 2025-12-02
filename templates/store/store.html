@@ -158,7 +158,7 @@
     {% endfor %}
 	{% else %}
 		<div class="col-md-12">
-			<h3>No products found. Please try again</h3>
+			<a href="{% url 'store' %}"><h3>No products found. Please try again</h3></a>
 		</div>
 	{% endif %}
 </div> <!-- row end.// -->
