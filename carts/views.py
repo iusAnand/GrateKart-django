@@ -78,6 +78,7 @@ def add_cart(request, product_id):
             cart_item.variation.add(*product_variation)
         cart_item.save() 
     return redirect('cart')
+    
 
 def remove_cart(request, product_id, cart_item_id):
     cart= Cart.objects.get(cart_id=_cart_id(request))
@@ -93,10 +94,10 @@ def remove_cart(request, product_id, cart_item_id):
         pass
     return redirect('cart')
 
-def remove_cart_item(request, product_id):
+def remove_cart_item(request, product_id, cart_item_id):
     cart= Cart.objects.get(cart_id=_cart_id(request))
     product= get_object_or_404(Product, id=product_id)
-    cart_item= CartItem.objects.get(product=product, cart=cart)
+    cart_item= CartItem.objects.get(product=product, cart=cart, id=cart_item_id)
     cart_item.delete()
     return redirect('cart')
 
