@@ -140,6 +140,13 @@ MESSAGE_TAGS = {
     
 }
 
+#smtp email configuration
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'rockayushdbg@gmail.com'
+EMAIL_HOST_PASSWORD = 'Radheradhe@123'
+EMAIL_USE_TLS = True
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 

@@ -31,5 +31,5 @@ class RegistrationForm(forms.ModelForm):
 # Check if password and confirm_password match if not, raise ValidationError
         if password != confirm_password:
             raise forms.ValidationError(
-                "Password does not match"
+                "Password does not match!"
             )
